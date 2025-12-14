@@ -43,7 +43,7 @@ const handleEnter = () => {
                 <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-white/80 shadow-lg">
                   <img 
                     src="/images/doctor-avatar.png" 
-                    alt="BS. Cao Thị Thùy" 
+                    alt="BS. Hoài Nam" 
                     class="w-full h-full object-cover"
                   />
                 </div>
@@ -72,7 +72,7 @@ const handleEnter = () => {
 
             <!-- Name -->
             <h1 class="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-slate-800/90 tracking-tight">
-              BS. Cao Thị Thùy
+              BS. Hoài Nam
             </h1>
 
             <!-- Title -->

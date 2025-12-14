@@ -82,7 +82,7 @@ onUnmounted(() => {
           </div>
           <div class="hidden sm:block">
             <h1 class="text-lg font-display font-semibold text-slate-800 group-hover:text-medical-600 transition-colors">
-              BS. Cao Thị Thùy
+              BS. Hoài Nam
             </h1>
             <p class="text-xs text-slate-500">Vật lý Trị liệu</p>
           </div>

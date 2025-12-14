@@ -29,7 +29,7 @@ const scrollToSection = (href: string) => {
               </el-icon>
             </div>
             <div>
-              <h3 class="text-lg font-display font-semibold">BS. Cao Thị Thùy</h3>
+              <h3 class="text-lg font-display font-semibold">BS. Hoài Nam</h3>
               <p class="text-sm text-slate-400">Bác sĩ Vật lý Trị liệu</p>
             </div>
           </div>
@@ -103,7 +103,7 @@ const scrollToSection = (href: string) => {
       <!-- Copyright -->
       <div class="border-t border-slate-800 mt-8 pt-8">
         <p class="text-center text-slate-500 text-sm">
-          © {{ currentYear }} BS. Cao Thị Thùy. Tất cả các quyền được bảo lưu.
+          © {{ currentYear }} BS. Hoài Nam. Tất cả các quyền được bảo lưu.
         </p>
       </div>
     </div>

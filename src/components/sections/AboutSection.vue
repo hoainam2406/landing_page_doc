@@ -37,7 +37,7 @@ const philosophies = [
           <div class="relative rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src="/images/doctor-working.png" 
-              alt="BS. Cao Thị Thùy đang điều trị cho bệnh nhân" 
+              alt="BS. Hoài Nam đang điều trị cho bệnh nhân" 
               class="w-full aspect-[4/3] object-cover"
             />
             <!-- Overlay gradient -->
@@ -60,7 +60,7 @@ const philosophies = [
         <div>
           <h3 class="text-2xl md:text-3xl font-display font-semibold text-slate-800 mb-6">
             Xin chào, <br>
-            <span class="text-medical-600">Tôi là BS. Cao Thị Thùy</span>
+            <span class="text-medical-600">Tôi là BS. Hoài Nam</span>
           </h3>
           
           <div class="space-y-4 text-slate-600 leading-relaxed">

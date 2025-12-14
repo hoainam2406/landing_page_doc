@@ -32,7 +32,7 @@
             <div class="relative w-56 h-56 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl">
               <img 
                 src="/images/doctor-avatar.png" 
-                alt="BS. Cao Thị Thùy - Bác sĩ Vật lý Trị liệu" 
+                alt="BS. Hoài Nam - Bác sĩ Vật lý Trị liệu" 
                 class="w-full h-full object-cover"
               />
             </div>
@@ -60,7 +60,7 @@
           </div>
 
           <h1 class="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-slate-800 mb-3 md:mb-4 leading-tight">
-            BS. Cao Thị Thùy
+            BS. Hoài Nam
           </h1>
 
           <h2 class="text-lg md:text-xl lg:text-2xl text-slate-600 font-medium mb-4 md:mb-6">
