@@ -24,7 +24,7 @@ const philosophies = [
 </script>
 
 <template>
-  <section id="about" class="section-padding bg-slate-50">
+  <section id="about" class="section-padding bg-slate-50" v-scroll-animate>
     <div class="section-container">
       <SectionTitle 
         title="Về Tôi" 

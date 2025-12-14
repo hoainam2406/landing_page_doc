@@ -34,7 +34,13 @@ const handleInfoClick = () => {
   emit('backToIntro')
 }
 
+const toggleMobileMenu = (event: Event) => {
+  event.stopPropagation()
+  isMobileMenuOpen.value = !isMobileMenuOpen.value
+}
+
 const handleClickOutside = (event: MouseEvent) => {
+  if (!isMobileMenuOpen.value) return
   if (headerRef.value && !headerRef.value.contains(event.target as Node)) {
     isMobileMenuOpen.value = false
   }
@@ -57,9 +63,8 @@ onUnmounted(() => {
     ref="headerRef"
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     :class="[
-      isScrolled || isMobileMenuOpen
-        ? 'glass-effect shadow-md py-3' 
-        : 'bg-transparent py-4'
+      isScrolled || isMobileMenuOpen ? 'glass-effect shadow-md' : 'bg-transparent',
+      isScrolled ? 'py-3' : 'py-4'
     ]"
   >
     <div class="section-container">
@@ -108,7 +113,7 @@ onUnmounted(() => {
         <!-- Mobile Menu Button -->
         <button
           class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
-          @click="isMobileMenuOpen = !isMobileMenuOpen"
+          @click="toggleMobileMenu"
         >
           <el-icon class="text-2xl text-slate-700">
             <component :is="isMobileMenuOpen ? 'Close' : 'Menu'" />

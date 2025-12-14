@@ -27,14 +27,14 @@ const contactInfo = [
 </script>
 
 <template>
-  <section id="contact" class="section-padding bg-slate-50">
+  <section id="contact" class="section-padding bg-slate-50" v-scroll-animate>
     <div class="section-container">
       <SectionTitle 
         title="Thông Tin Liên Hệ"
         subtitle="Kết nối với tôi"
       />
 
-      <div class="max-w-2xl mx-auto">
+      <div class="max-w-2xl mx-auto mt-8">
         <!-- Contact cards grid -->
         <div class="grid sm:grid-cols-3 gap-6">
           <a

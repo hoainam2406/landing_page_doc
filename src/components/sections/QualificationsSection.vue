@@ -30,7 +30,7 @@ const qualifications = [
 </script>
 
 <template>
-  <section id="qualifications" class="section-padding">
+  <section id="qualifications" class="section-padding" v-scroll-animate>
     <div class="section-container">
       <SectionTitle 
         title="Bằng Cấp & Chứng Chỉ"

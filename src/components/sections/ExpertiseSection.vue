@@ -30,7 +30,7 @@ const expertises = [
 </script>
 
 <template>
-  <section id="expertise" class="section-padding">
+  <section id="expertise" class="section-padding" v-scroll-animate>
     <div class="section-container">
       <SectionTitle 
         title="Chuyên Môn & Thế Mạnh"
@@ -45,9 +45,9 @@ const expertises = [
           shadow="never"
         >
           <template #header>
-            <div :class="['bg-gradient-to-r p-6 -m-5 mb-4', item.color]">
-              <div class="w-14 h-14 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center">
-                <el-icon class="text-3xl text-white">
+            <div :class="['bg-gradient-to-r p-4 -m-5 mb-4', item.color]">
+              <div class="w-12 h-12 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center">
+                <el-icon class="text-2xl text-white">
                   <component :is="item.icon" />
                 </el-icon>
               </div>

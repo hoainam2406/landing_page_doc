@@ -17,30 +17,30 @@ const handleEnter = () => {
     <div class="absolute top-1/2 right-1/3 w-[300px] h-[300px] bg-gradient-to-br from-emerald-200/20 to-teal-200/20 rounded-full blur-[80px] animate-float-reverse"></div>
     
     <!-- Glass Card -->
-    <div class="relative max-w-md mx-4 sm:mx-6 animate-fade-in-up">
+    <div class="relative max-w-lg mx-4 sm:mx-6 animate-fade-in-up">
       <!-- Outer glow -->
-      <div class="absolute -inset-[1px] bg-gradient-to-br from-white/60 via-teal-100/40 to-cyan-100/40 rounded-[32px] blur-xl opacity-50"></div>
+      <div class="absolute -inset-[2px] bg-gradient-to-br from-white/60 via-teal-100/40 to-cyan-100/40 rounded-[32px] blur-xl opacity-50"></div>
       
       <!-- Main Glass Card -->
-      <div class="relative bg-white/40 backdrop-blur-2xl rounded-[30px] p-6 sm:p-10 md:p-12 border border-white/60 shadow-[0_8px_32px_rgba(13,148,136,0.1)]">
+      <div class="relative bg-white/40 backdrop-blur-2xl rounded-[30px] p-8 sm:p-10 md:p-12 border border-white/60 shadow-[0_8px_32px_rgba(13,148,136,0.1)]">
         <!-- Subtle gradient overlay -->
         <div class="absolute inset-0 bg-gradient-to-br from-white/50 via-transparent to-teal-50/30 rounded-[30px] pointer-events-none"></div>
         
         <!-- Content -->
         <div class="relative z-10">
           <!-- Avatar with soft glow -->
-          <div class="flex justify-center mb-4">
+          <div class="flex justify-center mb-6">
             <div class="relative group">
               <!-- Soft pulsing glow -->
-              <div class="absolute -inset-3 bg-gradient-to-br from-teal-300/40 via-cyan-300/30 to-blue-300/40 rounded-full blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-700 animate-pulse-glow"></div>
+              <div class="absolute -inset-4 bg-gradient-to-br from-teal-300/40 via-cyan-300/30 to-blue-300/40 rounded-full blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-700 animate-pulse-glow"></div>
               
               <!-- Avatar ring -->
               <div class="relative">
                 <!-- Multiple glass layers for depth -->
-                <div class="absolute -inset-2 bg-white/40 backdrop-blur-sm rounded-full"></div>
-                <div class="absolute -inset-1 bg-gradient-to-br from-teal-400/30 to-cyan-400/30 rounded-full"></div>
+                <div class="absolute -inset-2.5 bg-white/40 backdrop-blur-sm rounded-full"></div>
+                <div class="absolute -inset-1.5 bg-gradient-to-br from-teal-400/30 to-cyan-400/30 rounded-full"></div>
                 
-                <div class="relative w-20 h-20 rounded-full overflow-hidden ring-2 ring-white/80 shadow-lg">
+                <div class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-2 ring-white/80 shadow-lg">
                   <img 
                     src="/images/doctor-avatar.png" 
                     alt="BS. Cao Thị Thùy" 
@@ -49,9 +49,9 @@ const handleEnter = () => {
                 </div>
                 
                 <!-- Verified badge - soft glass style -->
-                <div class="absolute -bottom-0.5 -right-0.5 bg-white/90 backdrop-blur-sm rounded-full p-1 shadow-lg ring-2 ring-white/60">
-                  <div class="w-5 h-5 bg-gradient-to-br from-teal-400 to-teal-500 rounded-full flex items-center justify-center">
-                    <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="absolute -bottom-1 -right-1 bg-white/90 backdrop-blur-sm rounded-full p-1.5 shadow-lg ring-2 ring-white/60">
+                  <div class="w-6 h-6 bg-gradient-to-br from-teal-400 to-teal-500 rounded-full flex items-center justify-center">
+                    <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
                     </svg>
                   </div>
@@ -61,47 +61,47 @@ const handleEnter = () => {
           </div>
 
           <!-- Content -->
-          <div class="text-center space-y-2">
+          <div class="text-center space-y-3">
             <!-- Badge -->
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/60 backdrop-blur-sm text-teal-700 rounded-full text-[10px] font-medium border border-white/80 shadow-sm">
-              <svg class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white/60 backdrop-blur-sm text-teal-700 rounded-full text-xs font-medium border border-white/80 shadow-sm">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
               </svg>
               <span>Chuyên gia Vẹo Cột Sống</span>
             </div>
 
             <!-- Name -->
-            <h1 class="text-2xl sm:text-3xl font-display font-bold text-slate-800/90 tracking-tight">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-slate-800/90 tracking-tight">
               BS. Cao Thị Thùy
             </h1>
 
             <!-- Title -->
-            <p class="text-sm text-slate-600/90 font-medium">
+            <p class="text-base sm:text-lg text-slate-600/90 font-medium">
               Bác sĩ Vật lý Trị liệu
             </p>
 
             <!-- Soft divider -->
-            <div class="flex items-center gap-2 justify-center py-2">
+            <div class="flex items-center gap-2 justify-center py-3">
               <div class="h-px w-12 bg-gradient-to-r from-transparent via-teal-300/50 to-transparent"></div>
               <div class="w-1 h-1 rounded-full bg-teal-400/60"></div>
               <div class="h-px w-12 bg-gradient-to-l from-transparent via-teal-300/50 to-transparent"></div>
             </div>
 
             <!-- Stats - Compact -->
-            <div class="flex items-center justify-center gap-4 py-1.5">
+            <div class="flex items-center justify-center gap-6 py-2">
               <div class="text-center">
-                <p class="text-lg font-bold bg-gradient-to-br from-teal-600 to-cyan-600 bg-clip-text text-transparent">10+</p>
-                <p class="text-[9px] text-slate-500/80 mt-0.5 uppercase tracking-wider font-medium">Năm</p>
+                <p class="text-xl font-bold bg-gradient-to-br from-teal-600 to-cyan-600 bg-clip-text text-transparent">10+</p>
+                <p class="text-[10px] text-slate-500/80 mt-0.5 uppercase tracking-wider font-medium">Năm</p>
               </div>
-              <div class="w-px h-8 bg-gradient-to-b from-transparent via-teal-300/40 to-transparent"></div>
+              <div class="w-px h-10 bg-gradient-to-b from-transparent via-teal-300/40 to-transparent"></div>
               <div class="text-center">
-                <p class="text-lg font-bold bg-gradient-to-br from-teal-600 to-cyan-600 bg-clip-text text-transparent">1000+</p>
-                <p class="text-[9px] text-slate-500/80 mt-0.5 uppercase tracking-wider font-medium">Bệnh nhân</p>
+                <p class="text-xl font-bold bg-gradient-to-br from-teal-600 to-cyan-600 bg-clip-text text-transparent">1000+</p>
+                <p class="text-[10px] text-slate-500/80 mt-0.5 uppercase tracking-wider font-medium">Bệnh nhân</p>
               </div>
-              <div class="w-px h-8 bg-gradient-to-b from-transparent via-teal-300/40 to-transparent"></div>
+              <div class="w-px h-10 bg-gradient-to-b from-transparent via-teal-300/40 to-transparent"></div>
               <div class="text-center">
-                <p class="text-lg font-bold bg-gradient-to-br from-teal-600 to-cyan-600 bg-clip-text text-transparent">100%</p>
-                <p class="text-[9px] text-slate-500/80 mt-0.5 uppercase tracking-wider font-medium">Tận tâm</p>
+                <p class="text-xl font-bold bg-gradient-to-br from-teal-600 to-cyan-600 bg-clip-text text-transparent">100%</p>
+                <p class="text-[10px] text-slate-500/80 mt-0.5 uppercase tracking-wider font-medium">Tận tâm</p>
               </div>
             </div>
 
@@ -140,8 +140,50 @@ const handleEnter = () => {
               </div>
             </div>
 
+            <!-- Social Media - Glass Buttons -->
+            <div class="flex items-center justify-center gap-3 pt-3">
+              <!-- Zalo -->
+              <a
+                href="https://zalo.me/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group relative w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white transition-all duration-300 hover:scale-110 shadow-md"
+                title="Zalo"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 14.063c-.206.438-.682.876-1.12 1.02-.438.145-2.52.73-4.894-1.458-2.812-2.595-3.354-5.156-3.354-5.156s-.125-.5.188-.75c.312-.25.687-.25.687-.25s.438-.02.625.188c.188.208.625 1.02.625 1.02s.312.563.188.813c-.125.25-.375.5-.5.625-.125.125-.25.312-.125.562.125.25.625 1.063 1.375 1.75.938.875 1.75 1.187 2 1.312.25.125.438.063.625-.125.188-.188.438-.5.688-.75.188-.188.438-.25.625-.125.188.125 1.188.563 1.375.688.188.125.312.188.375.312.063.125.063.5-.144.938z"/>
+                </svg>
+              </a>
+
+              <!-- Facebook -->
+              <a
+                href="https://facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group relative w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white transition-all duration-300 hover:scale-110 shadow-md"
+                title="Facebook"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </a>
+
+              <!-- TikTok -->
+              <a
+                href="https://tiktok.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group relative w-10 h-10 rounded-full flex items-center justify-center bg-gradient-to-br from-gray-800 to-black hover:from-gray-700 hover:to-gray-900 text-white transition-all duration-300 hover:scale-110 shadow-md"
+                title="TikTok"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                </svg>
+              </a>
+            </div>
+
             <!-- Compact Glass Button -->
-            <div class="pt-3">
+            <div class="pt-4">
               <button
                 @click="handleEnter"
                 class="group relative inline-flex items-center justify-center px-6 py-2.5 bg-gradient-to-br from-teal-500/90 to-cyan-500/90 hover:from-teal-500 hover:to-cyan-500 text-white font-semibold text-xs rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/30 overflow-hidden"
