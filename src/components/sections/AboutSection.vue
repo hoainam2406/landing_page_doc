@@ -44,8 +44,8 @@ const philosophies = [
             <div class="absolute inset-0 bg-gradient-to-t from-medical-900/20 to-transparent"></div>
           </div>
           
-          <!-- Experience badge -->
-          <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-6 border border-slate-100">
+          <!-- Experience badge - Hidden on mobile -->
+          <div class="hidden md:block absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-6 border border-slate-100">
             <div class="text-center">
               <p class="text-4xl font-bold text-medical-600">10+</p>
               <p class="text-sm text-slate-600 mt-1">Năm kinh nghiệm</p>

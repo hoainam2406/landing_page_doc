@@ -2,9 +2,12 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 
+const emit = defineEmits(['backToIntro'])
+
 const router = useRouter()
 const isScrolled = ref(false)
 const isMobileMenuOpen = ref(false)
+const headerRef = ref<HTMLElement | null>(null)
 
 const navItems = [
   { label: 'Về Tôi', href: '#about' },
@@ -26,17 +29,32 @@ const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
+const handleInfoClick = () => {
+  isMobileMenuOpen.value = false
+  emit('backToIntro')
+}
+
+const handleClickOutside = (event: MouseEvent) => {
+  if (headerRef.value && !headerRef.value.contains(event.target as Node)) {
+    isMobileMenuOpen.value = false
+  }
+}
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  document.addEventListener('click', handleClickOutside)
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  document.removeEventListener('click', handleClickOutside)
 })
 </script>
 
+
 <template>
   <header
+    ref="headerRef"
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     :class="[
       isScrolled || isMobileMenuOpen
@@ -77,6 +95,14 @@ onUnmounted(() => {
             {{ item.label }}
             <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-medical-600 transition-all duration-300 group-hover:w-full"></span>
           </a>
+          <!-- Thông tin button -->
+          <button
+            @click="handleInfoClick"
+            class="flex items-center gap-2 px-4 py-2 bg-medical-500 hover:bg-medical-600 text-white font-medium rounded-lg transition-colors"
+          >
+            <el-icon><InfoFilled /></el-icon>
+            <span>Thông tin</span>
+          </button>
         </nav>
 
         <!-- Mobile Menu Button -->
@@ -89,13 +115,15 @@ onUnmounted(() => {
           </el-icon>
         </button>
       </div>
+    </div>
 
-      <!-- Mobile Navigation -->
-      <Transition name="slide-down">
-        <nav
-          v-if="isMobileMenuOpen"
-          class="md:hidden mt-4 pb-4 border-t border-slate-200 pt-4 bg-white/95 backdrop-blur-md rounded-b-lg"
-        >
+    <!-- Mobile Navigation - Full Width -->
+    <Transition name="slide-down">
+      <nav
+        v-if="isMobileMenuOpen"
+        class="md:hidden border-t border-slate-200 bg-white/95 backdrop-blur-md"
+      >
+        <div class="section-container py-4">
           <div class="flex flex-col gap-3">
             <a
               v-for="item in navItems"
@@ -106,10 +134,19 @@ onUnmounted(() => {
             >
               {{ item.label }}
             </a>
+            
+            <!-- Thông tin button mobile -->
+            <button
+              @click="handleInfoClick"
+              class="flex items-center justify-center gap-2 w-full px-4 py-2 bg-medical-500 hover:bg-medical-600 text-white font-medium rounded-lg transition-colors mt-2"
+            >
+              <el-icon><InfoFilled /></el-icon>
+              <span>Thông tin</span>
+            </button>
           </div>
-        </nav>
-      </Transition>
-    </div>
+        </div>
+      </nav>
+    </Transition>
   </header>
 </template>
 

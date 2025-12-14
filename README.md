@@ -1,5 +1,66 @@
-# Vue 3 + TypeScript + Vite
+# Landing Page - BS. Cao Thị Thùy
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Landing page giới thiệu bác sĩ Vật lý Trị liệu chuyên về điều trị vẹo cột sống và các vấn đề cơ xương khớp.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## 🚀 Deployment
+
+Website được deploy tự động lên GitHub Pages khi push code lên branch `main`.
+
+**Live URL:** `https://[your-username].github.io/landing_page_doc/`
+
+## 💻 Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## 🛠️ Tech Stack
+
+- **Vue 3** + TypeScript
+- **Vite** - Build tool
+- **TailwindCSS** - Styling
+- **Element Plus** - UI components
+- **Vue Router** - Routing
+
+## 📦 Project Structure
+
+```
+landing_page_doc/
+├── public/
+│   └── images/          # Static images
+├── src/
+│   ├── assets/
+│   │   └── styles/      # Global styles
+│   ├── components/
+│   │   ├── layout/      # Layout components (Header, Footer)
+│   │   ├── sections/    # Page sections
+│   │   └── ui/          # Reusable UI components
+│   ├── router/          # Vue Router configuration
+│   ├── views/           # Page views
+│   ├── App.vue
+│   └── main.ts
+└── ...config files
+```
+
+## 🎨 Features
+
+- ✨ Modern glassmorphism design
+- 📱 Fully responsive (mobile-first)
+- 🎭 Smooth animations and transitions
+- 💫 Intro card splash screen
+- 🎯 Smooth scroll navigation
+- ♿ Accessible design
+
+## 📝 License
+
+Private project - All rights reserved.

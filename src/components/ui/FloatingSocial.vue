@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const emit = defineEmits(['backToIntro'])
+
 const socialLinks = [
   {
     name: 'Zalo',
@@ -28,40 +30,69 @@ const socialLinks = [
     </svg>`,
   },
 ]
+
+const handleInfoClick = () => {
+  emit('backToIntro')
+}
 </script>
 
 <template>
-  <div class="fixed bottom-4 right-4 z-50 flex flex-col gap-3">
-    <a
-      v-for="social in socialLinks"
-      :key="social.name"
-      :href="social.href"
-      target="_blank"
-      rel="noopener noreferrer"
-      :class="[
-        'group relative w-14 h-14 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white',
-        'transition-all duration-300 ease-out',
-        'hover:scale-110 hover:rotate-6',
-        'shadow-lg hover:shadow-2xl',
-        'bg-gradient-to-br',
-        social.color,
-        social.hoverColor
-      ]"
-      :title="social.name"
+  <div>
+    <!-- Social buttons - right bottom -->
+    <div class="fixed bottom-4 right-4 z-50 flex flex-col gap-3">
+      <a
+        v-for="social in socialLinks"
+        :key="social.name"
+        :href="social.href"
+        target="_blank"
+        rel="noopener noreferrer"
+        :class="[
+          'group relative w-14 h-14 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white',
+          'transition-all duration-300 ease-out',
+          'hover:scale-110 hover:rotate-6',
+          'shadow-lg hover:shadow-2xl',
+          'bg-gradient-to-br',
+          social.color,
+          social.hoverColor
+        ]"
+        :title="social.name"
+      >
+        <!-- Pulse effect -->
+        <span class="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 group-hover:animate-ping"></span>
+        
+        <!-- Icon -->
+        <span v-html="social.icon" class="relative z-10"></span>
+        
+        <!-- Tooltip -->
+        <span class="absolute right-full mr-3 px-3 py-1.5 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none shadow-lg">
+          {{ social.name }}
+          <!-- Arrow -->
+          <span class="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 bg-slate-800 rotate-45"></span>
+        </span>
+      </a>
+    </div>
+
+    <!-- Info button - left bottom -->
+    <button
+      @click="handleInfoClick"
+      class="fixed bottom-4 left-4 z-50 group relative w-14 h-14 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white bg-gradient-to-br from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 transition-all duration-300 ease-out hover:scale-110 shadow-lg hover:shadow-2xl"
+      title="Thông tin"
     >
       <!-- Pulse effect -->
       <span class="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 group-hover:animate-ping"></span>
       
       <!-- Icon -->
-      <span v-html="social.icon" class="relative z-10"></span>
+      <svg class="w-6 h-6 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
       
       <!-- Tooltip -->
-      <span class="absolute right-full mr-3 px-3 py-1.5 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none shadow-lg">
-        {{ social.name }}
+      <span class="absolute left-full ml-3 px-3 py-1.5 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none shadow-lg">
+        Thông tin
         <!-- Arrow -->
-        <span class="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 bg-slate-800 rotate-45"></span>
+        <span class="absolute top-1/2 -left-1 -translate-y-1/2 w-2 h-2 bg-slate-800 rotate-45"></span>
       </span>
-    </a>
+    </button>
   </div>
 </template>
 
