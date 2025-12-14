@@ -4,7 +4,7 @@
 <template>
   <section 
     id="hero" 
-    class="relative min-h-screen md:min-h-screen flex items-center pt-24 pb-16 md:pb-20 overflow-hidden"
+    class="relative min-h-screen md:min-h-screen flex items-center pt-16 md:pt-24 pb-16 md:pb-20 overflow-hidden"
   >
     <!-- Background Image -->
     <div class="absolute inset-0">
