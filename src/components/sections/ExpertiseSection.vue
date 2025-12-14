@@ -37,7 +37,7 @@ const expertises = [
         subtitle="Những lĩnh vực tôi có thể hỗ trợ bạn"
       />
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <el-card
           v-for="(item, index) in expertises"
           :key="item.title"

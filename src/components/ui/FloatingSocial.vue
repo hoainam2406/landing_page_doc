@@ -31,7 +31,7 @@ const socialLinks = [
 </script>
 
 <template>
-  <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+  <div class="fixed bottom-4 right-4 z-50 flex flex-col gap-3">
     <a
       v-for="social in socialLinks"
       :key="social.name"
@@ -39,7 +39,7 @@ const socialLinks = [
       target="_blank"
       rel="noopener noreferrer"
       :class="[
-        'group relative w-12 h-12 rounded-full flex items-center justify-center text-white',
+        'group relative w-14 h-14 md:w-12 md:h-12 rounded-full flex items-center justify-center text-white',
         'transition-all duration-300 ease-out',
         'hover:scale-110 hover:rotate-6',
         'shadow-lg hover:shadow-2xl',

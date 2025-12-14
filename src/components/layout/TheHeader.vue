@@ -39,7 +39,7 @@ onUnmounted(() => {
   <header
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     :class="[
-      isScrolled 
+      isScrolled || isMobileMenuOpen
         ? 'glass-effect shadow-md py-3' 
         : 'bg-transparent py-4'
     ]"
@@ -94,7 +94,7 @@ onUnmounted(() => {
       <Transition name="slide-down">
         <nav
           v-if="isMobileMenuOpen"
-          class="md:hidden mt-4 pb-4 border-t border-slate-200 pt-4"
+          class="md:hidden mt-4 pb-4 border-t border-slate-200 pt-4 bg-white/95 backdrop-blur-md rounded-b-lg"
         >
           <div class="flex flex-col gap-3">
             <a
